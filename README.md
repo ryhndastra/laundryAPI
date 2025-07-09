@@ -99,12 +99,6 @@ http://127.0.0.1:8000
 
 ---
 
-## 📄 Lisensi
-
-Proyek ini dirilis di bawah lisensi [MIT](LICENSE).
-
----
-
 ## 🔗 Terkait
 
 - 📱 Frontend (Flutter): *[Akan tersedia di repo terpisah]*
