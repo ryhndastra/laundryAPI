@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -48,5 +49,28 @@ class UserController extends Controller
             'message' => 'Registrasi berhasil.',
             'data'    => $user
         ], 201);
+    }
+    public function login(Request $request)
+    {
+        $this->validate($request, [
+            'email'    => 'required|email',
+            'password' => 'required|string',
+        ]);
+
+        if(!Auth::attempt($request->only('email', 'password'))){
+            return response()->json([
+                'message' => 'Email atau password salah.'
+            ], 401);
+        }
+
+        $user = User::where('email', $request->email)->firstOrFail();
+
+        $token = $user->createToken('auth_token')->plainTextToken;
+
+        return response()->json([
+            'message' => 'Login berhasil.',
+            'data'    => $user,
+            'token'   => $token
+        ], 200);
     }
 }

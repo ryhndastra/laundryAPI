@@ -5,3 +5,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/user', [App\Http\Controllers\api\UserController::class, 'readAll']);
 Route::post('/register', [App\Http\Controllers\api\UserController::class, 'register']);
+Route::post('/login', [App\Http\Controllers\api\UserController::class, 'login']);
