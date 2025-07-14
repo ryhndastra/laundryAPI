@@ -22,6 +22,7 @@ LaundryAPI adalah backend RESTful API yang dibangun menggunakan **Laravel** dan 
 - MySQL
 - Laravel Eloquent ORM
 - Laravel Migrations dan Seeders
+- Laravel Sanctum
 
 ---
 
@@ -77,21 +78,6 @@ API akan tersedia di:
 http://127.0.0.1:8000
 ```
 
----
-
-## 📚 Contoh Endpoint
-
-| Method | Endpoint              | Deskripsi               |
-|--------|-----------------------|-------------------------|
-| POST   | /api/register         | Registrasi pengguna     |
-| POST   | /api/login            | Login dan ambil token   |
-| GET    | /api/services         | Lihat daftar layanan    |
-| POST   | /api/orders           | Buat pesanan            |
-| GET    | /api/orders           | Lihat pesanan pengguna  |
-| PUT    | /api/orders/{id}      | Update status pesanan   |
-
----
-
 ## 📌 Catatan
 
 - Aktifkan CORS jika diakses dari aplikasi Flutter
@@ -101,4 +87,4 @@ http://127.0.0.1:8000
 
 ## 🔗 Terkait
 
-- 📱 Frontend (Flutter): *[Akan tersedia di repo terpisah]*
+- 📱 Frontend (Flutter): *https://github.com/ryhndastra/bwa-laundry-frontend.git*
