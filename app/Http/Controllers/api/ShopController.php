@@ -31,7 +31,7 @@ class ShopController extends Controller
     }
 
     public function searchByCity($name){
-        $shops = Shop::where('city','like', '%'.$name,'%')->orderBy('name')->get();
+        $shops = Shop::where('city','like', '%'.$name.'%')->orderBy('name')->get();
 
         if(count($shops) > 0){
             return response()->json([
